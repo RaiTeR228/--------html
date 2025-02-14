@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   overflow-x: hidden;
-  background: url('image/zxc.png') no-repeat center center/cover;
+  background: url('image/FRONT.png') no-repeat center center/cover;
   transition: background-color 0.5s ease;
 }
 
@@ -31,7 +31,8 @@ body {
 
 .container {
   width: 90vw;
-  background-color: rgba(255, 255, 255, 0.95);
+  background: url('image/zxc.png') no-repeat center center/cover;
+  /* background-color: rgba(255, 255, 255, 0.95); */
   padding: 30px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
@@ -53,21 +54,21 @@ body {
 }
 
 .image-container img:first-child {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 80%;
   object-fit: cover;
   border-radius: 16px;
 }
 
 .image-overlay {
   position: absolute;
-  top: 30%;
-  left: 35%;
+  top: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  /* /* height: 250px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  object-fit: cover; */
+  object-fit: cover;
   border: 6px solid white; 
 }
 
@@ -102,7 +103,7 @@ p {
   <div class="container">
     <div class="top-section">
       <div class="image-container">
-        <img src="image/FRONT.png" alt="Фон фото">
+        <!-- <img src="image/FRONT.png" alt="Фон фото"> -->
         <img class="image-overlay" src="image\3f1a49f1-d713-4b05-877a-59b7a86194f4.png" alt="Фото человека">
       </div>
       <div class="text-container">
@@ -136,7 +137,7 @@ p {
   document.addEventListener('DOMContentLoaded', handleScroll);
   window.addEventListener('scroll', handleScroll);
 
-  var map = L.map('map').setView([51.505, -0.09], 13);
+  var map = L.map('map').setView([56,12, -0.09], 13);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
